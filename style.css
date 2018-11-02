@@ -1,0 +1,393 @@
+/* Global */
+
+@font-face{
+  font-family: 'martel';
+  src: url('./assets/Martel/martelsans-extrabold.otf');
+  /* font-style: normal; */
+  
+}
+
+html, body, #fullheight {
+  min-height: 100% !important;
+  height: 100%;
+
+}
+
+body{
+  margin: 1em 10em;
+  font-family: 'martel', serif;
+  color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+main{
+  overflow: hidden;
+}
+
+
+p{
+  font-size: 1em;
+}
+
+
+a{
+  text-decoration: none;
+  color: #353535;
+  cursor: pointer;
+  
+}
+input:focus{
+  outline: none;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #292929 inset;
+  -webkit-text-fill-color: white;
+}
+
+.row{
+  padding: 0;
+  margin: 0;
+}
+
+
+@media only screen and (max-width: 990px){
+
+  body{
+    margin: 2em 4em;
+  }
+
+  h1{
+    font-size: 1em;
+    
+  }
+
+  p,
+  a {
+    font-size: .9em;
+  }
+}
+
+@media only screen and (max-width: 600px){
+
+  body{
+    margin: 1em;
+  }
+
+  h1{
+    font-size: .5em;
+  }
+
+}
+
+/* Header */
+
+header{
+  margin: 0;
+  padding-bottom: 1%;
+  overflow: hidden;
+}
+
+.logo-main{
+  height: 100px;
+  position: absolute;
+  left: 50%;
+}
+.nav{
+  font-size: 1.3em;
+  text-align: center;
+  height: 100%;
+  display: flex;
+}
+
+.nav-link-wrapper{
+  line-height: 5em;
+}
+
+.nav-link-wrapper a{
+  font-size: .75em;
+  margin: 0px 5px;
+}
+
+@media only screen and (max-width: 1100px){
+  .logo-main{
+    position: relative;
+    height: 80px;
+  }
+  .nav-link-wrapper{
+    line-height: 50px;
+  }
+  .logo-main{
+    left: 0;
+    height: 70px;
+  }
+
+  .nav{
+    justify-content: flex-end;
+  }
+
+} 
+
+/* Hero */
+
+#hero-section{
+  overflow: hidden;
+  position: relative;
+  margin-top: 1em;
+}
+
+
+.fullscreen-bg{
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.video-content{
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+video{
+  align: center;
+}
+
+.hero-video{
+  width: 100%;
+}
+
+@media only screen and (max-width: 990px){
+
+  #hero-section{
+  
+  }
+  
+  .hero-video{
+   width: fit-content;
+  }
+}
+/* Copy */
+
+
+.copy-wrapper{
+  padding-top: 25px;
+}
+
+.copy-1,
+.copy-2{
+  background: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.copy-1 p,
+.copy-2 p{
+  width: 80%;
+  line-height: 2em;
+}
+
+
+.copy-image-1{
+  background: url('./assets/cable-car.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+
+.copy-image-2{
+  background: url('./assets/persons-working.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+@media only screen and(max-width: 990px){
+
+  .copy-wrapper{
+    position: relative;
+  }
+
+  /* .copy-1,
+  .copy-2 {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 100;
+    color: white;
+    background: rgba(0,0,0,.5);
+  } */
+} 
+
+
+/* Postions */
+#positions{
+  overflow: hidden;
+  position: relative;
+  margin-top: 1em;
+}
+
+.position-row {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.positions-block{
+  position: absolute;
+  text-align: center;
+  color: white;
+  height: 100%;
+  width: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  overflow: hidden;
+}
+
+.positions-video{
+  width: 100%;
+  
+}
+
+.positions-block p{
+  margin-bottom: 2em;
+}
+
+.postions-button{
+  padding: 1em 1.5em;
+  border: 2px solid #54B1CC;
+  transition: .5s;
+}
+
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+  .positions-block{
+    transform: translate(-50%, -35%);
+ }
+}
+
+
+@media only screen and (max-width: 600px){
+  .positions-block{
+    transform: translate(-50%, -30%);
+  }
+
+  .positions-video{
+    width: fit-content;
+    max-height: 100vh;
+  }
+}
+@media only screen and (max-width: 350px){
+  .positions-block{
+    transform: translate(-50%, -45%);
+  }
+
+}
+
+
+/* Stay Connected */
+
+#stay-connected{
+  background: #292929;
+  color: white;
+  height: 100%;
+  
+}
+
+.stay-connected-row{
+  min-height: 55vh
+}
+
+.stay-connected-row h3{
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.email-input{
+  padding: 10px 20px;
+  color: white;
+  background: #292929;
+  font-size: 16px;
+  width: 30%;
+  min-width: 200px;
+  border: 1px solid white;
+  margin-bottom: 3em;
+}
+
+.email-submit{
+  cursor: pointer;
+  padding: 10px 20px;
+  background: none;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 3em;
+}
+
+.social-wrapper a{
+  color: white;
+  margin: 3em;
+  font-size: 20px;
+}
+@media only screen and (max-width: 990px){
+  .social-wrapper a{
+    margin: 1em;
+  }
+
+  .email-input{
+    margin-bottom: 1em;
+  }
+  .email-submit{
+    margin-bottom: 1em;
+  }
+}
+
+/* Footer */
+
+footer{
+  max-width: 1900px;
+  margin-top: 25px;
+}
+
+.footer-block{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 17vh;
+  
+}
+
+.footer-block  p{
+  margin: 0;
+} 
+
+@media only screen and (max-width: 990px){
+  .footer-block{
+    display: inline;
+  }
+  .footer-item-wrapper{
+    display: flex;
+    justify-content: space-around;
+    height: 3em;
+
+  }
+}

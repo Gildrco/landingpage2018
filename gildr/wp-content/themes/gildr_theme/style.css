@@ -1,0 +1,701 @@
+/*!
+Theme Name: Gildr
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: gildr
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Gildr is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+	 ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+
+
+/* Sections
+
+/*--------------------------------------------------------------
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+
+
+/* CUSTOM Styles */
+
+/* Global */
+
+@font-face{
+  font-family: 'martel';
+  src: url('/wp-content/themes/gildr_theme/assets/Martel/martelsans-extrabold.otf');
+  font-style: normal;
+  
+}
+
+
+body{
+  margin: 0px;
+  padding: 2em;
+  font-family: 'martel', serif;
+  color: #353535;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+main{
+  overflow: hidden;
+}
+
+
+p{
+  font-size: 1em;
+}
+
+@media (max-width: 990px){
+
+  .video-content{
+    width: 80%;
+  }
+
+  h1{
+    font-size: 1em;
+    
+  }
+
+  p,
+  a {
+    font-size: .9em;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: #353535;
+  cursor: pointer;
+  
+}
+input:focus{
+  outline: none;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #292929 inset;
+  -webkit-text-fill-color: white;
+}
+
+.row{
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Header */
+
+header{
+  height: 180px;
+  margin: 0;
+  padding-bottom: 1%;
+  overflow: hidden;
+}
+
+.logo-main{
+  height: 180px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%)
+}
+.nav{
+  font-size: 1.3em;
+  text-align: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.nav-link-wrapper{
+  margin-right: 20px;
+  line-height: 180px;
+}
+
+.nav-link-wrapper a{
+  font-size: 16px;
+  margin: 0px 5px;
+}
+
+@media (max-width: 990px){
+  .logo-main{
+    position: relative;
+    height: 100px;
+  }
+  .nav-link-wrapper{
+    line-height: 50px;
+  }
+} 
+
+/* Hero */
+
+#hero-section{
+  overflow: hidden;
+}
+
+.video-content{
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  max-width: 75%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+video{
+  align: center;
+}
+
+
+.fullscreen-bg{
+  overflow: hidden;
+  max-height: 520px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Copy */
+
+#copy-section{
+}
+
+.copy-wrapper{
+  padding-top: 25px;
+}
+
+.copy-1,
+.copy-2{
+  background: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.copy-1 p,
+.copy-2 p{
+  width: 80%;
+  line-height: 2em;
+}
+
+
+.copy-image-1{
+  background: url('/wp-content/themes/gildr_theme/assets/cable-car.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+
+.copy-image-2{
+  background: url('/wp-content/themes/gildr_theme/assets/persons-working.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+@media (max-width: 990px){
+
+  .copy-wrapper{
+    position: relative;
+  }
+
+  .copy-1,
+  .copy-2 {
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 100;
+    color: white;
+    background: rgba(0,0,0,.5);
+  }
+} 
+
+
+/* Postions */
+#positions{
+  background-image: url('/wp-content/themes/gildr_theme/assets/father-daughter.mp4');
+  margin-top: 25px;
+  position: relative;
+  max-height: 550px;
+  overflow: hidden;
+}
+
+.positions-block{
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+
+.positions-video{
+  overflow: hidden;
+
+}
+
+.positions-block-wrapper{
+  position: absolute;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  height: 70vh;
+}
+
+.positions-block p {
+  width: 75%;
+  line-height: 2.5em;
+}
+
+.postions-button{
+  padding: 1em 1.5em;
+  border: 2px solid #54B1CC;
+  transition: .5s;
+}
+
+.postions-button:hover{
+  background: rgba(235, 235, 235, 0.315)
+}
+
+@media (max-width: 990px){
+
+  .positions-block p{
+    font-size: 12px;
+  }
+
+  .positions-block-wrapper{
+    height: 100vh;
+  }
+}
+
+/* Stay Connected */
+
+#stay-connected{
+  background: #292929;
+  color: white;
+  margin-top: 25px;
+}
+
+.stay-connected-row{
+  min-height: 50vh
+}
+
+.stay-connected-row h3{
+  font-size: 30px;
+  font-weight: 300;
+
+}
+
+.email-input{
+  padding: 10px 20px;
+  color: white;
+  background: #292929;
+  font-size: 16px;
+  width: 12em;
+  border: 1px solid white;
+  margin-bottom: 3em;
+}
+
+.email-submit{
+  cursor: pointer;
+  padding: 10px 20px;
+  background: none;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 3em;
+}
+
+.social-wrapper a{
+  color: white;
+  margin: 3em;
+  font-size: 20px;
+}
+@media (max-width: 990px){
+  .social-wrapper a{
+    margin: 1em;
+  }
+}
+
+/* Footer */
+
+footer{
+  max-width: 1900px;
+  margin-top: 25px;
+}
+
+.footer-block{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 17vh;
+  
+}
+
+.footer-block  p{
+  margin: 0;
+} 
+
+@media (max-width: 990px){
+  .footer-block{
+    display: inline;
+  }
+  .footer-item-wrapper{
+    display: flex;
+    justify-content: space-around;
+    height: 3em;
+
+  }
+}
