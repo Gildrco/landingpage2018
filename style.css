@@ -204,7 +204,7 @@ video{
 
 
 .copy-image-1{
-  background: url('./assets/cable-car.jpg');
+  /* background: url('./assets/cable-car.jpg'); */
   background-size: cover;
   background-position: center;
   height: 60vh;
@@ -238,14 +238,15 @@ video{
 } 
 
 
-/* Postions */
-#positions{
+/* why */
+
+#why{
   overflow: hidden;
   position: relative;
   margin-top: 1em;
 }
 
-.position-row {
+.why-row {
   overflow: hidden;
   position: relative;
   display: flex;
@@ -253,7 +254,7 @@ video{
   position: relative;
 }
 
-.positions-block{
+.why-block{
   position: absolute;
   text-align: center;
   color: white;
@@ -265,20 +266,15 @@ video{
   overflow: hidden;
 }
 
-.positions-video{
+.why-video{
   width: 100%;
-  
 }
 
-.positions-block p{
+.why-block p{
   margin-bottom: 2em;
 }
 
-.postions-button{
-  padding: 1em 1.5em;
-  border: 2px solid #54B1CC;
-  transition: .5s;
-}
+
 
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
   .positions-block{
@@ -288,20 +284,40 @@ video{
 
 
 @media only screen and (max-width: 600px){
-  .positions-block{
+  .why-block{
     transform: translate(-50%, -30%);
   }
 
-  .positions-video{
+  .why-video{
     width: fit-content;
     max-height: 100vh;
   }
 }
 @media only screen and (max-width: 350px){
-  .positions-block{
-    transform: translate(-50%, -45%);
+  .why-block{
+    transform: translate(-50%, -35%);
   }
 
+}
+
+
+/* Why */
+
+#why-section{
+  background: #F5F5F5;
+  height: 20vh;
+  margin: 1em 0;
+}
+
+.positions-button-wrapper{
+  height: 100%;
+}
+
+.postions-button{
+  padding: .8em 1em .5em 1em;
+  vertical-align: middle;
+  border: 2px solid #54B1CC;
+  transition: .5s;
 }
 
 
