@@ -19,20 +19,27 @@
 </head>
 <body>
     <!-- Header -->
+    
+
     <main>
     <header><!-- header -->
 
+      <div id="myProgress">
+         <div id="myBar"></div>
+      </div>
+
       <div class="nav-wrapper row end-lg  between-xs middle-lg middle-md middle-sm middle-xs">
             
-            <img src="./assets/GILDR v2 (1).png" alt="" class="logo-main">
+            <img src="./assets/logo.png" alt="" class="logo-main">
 
-            <nav class="nav">
 
-                <div class="nav-link-wrapper">
-                  <a class="nav-link-lang" style="color: red" href="#">English &nbsp;&nbsp;</a><a class="nav-link-lang" href="./index-cn.html">中文</a>
-                </div>
+            <div class="nav">
+              <ul class="nav-link-wrapper">
+              <li><a class="nav-link-lang" style="color: red" href="#">English &nbsp;&nbsp;</a></li> <li><a class="nav-link-lang" href="./index-cn.html">中文</a></li>
+              </ul>
+            </div>
+      
 
-            </nav>
               
       </div><!-- nav-wrapper -->
     </header><!-- Header -->
@@ -45,7 +52,7 @@
           <h1>Gildr was founded on the idea of building brilliant tech, to help communities preserve their legacies and to celebrate life.</h1>
       </div>
 
-      <video class="hero-video" loop muted autoplay> 
+      <video class="hero-video" loop muted autoplay playsinline> 
         <source src="./assets/hk-header-video-sm.mp4" type="video/mp4">
       </video>
     </div>
@@ -66,26 +73,26 @@
                <!-- image 1 -->
                
                
-               <div class="copy-image-1 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs" 
-                    style="background: url('./assets/cable-car.jpg');
+               <div id="image-1" class="copy-image-en-1 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs" 
+                    style='background: url("");
                      background-size: cover;
                      background-position: center;
-                     height: 60vh;">
-              </div><!-- image 1.1 -->
+                     height: 60vh;''>
+              </div>
 
-              <div class="copy-image-1 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs" 
+              <div id="image-2" class="copy-image-en-1 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs" 
                     style="background: url('./assets/hk-ship.jpg');
                     background-size: cover;
                     background-position: center;
                     height: 60vh;">
-               </div><!-- image 1.2 -->
+               </div>
 
-               <div class="copy-image-1 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs" 
-                    style="background: url('./assets/hk-bus.jpg');
+               <div id="image-3" class="copy-image-en-1 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs" 
+                    style="background: url('');
                     background-size: cover;
                     background-position: center;
                     height: 60vh;">
-               </div><!-- image 1.3 -->
+               </div>
          
             </div><!-- copy-wrapper 1 -->
 
@@ -93,22 +100,22 @@
             
             <div class="row copy-wrapper"><!-- copy-wrapper 2 -->
 
-              <div class="copy-image-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs"
+              <div id="image-4" class="copy-image-en-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs"
                   style="background: url('./assets/hk-bird.jpg');
                   background-size: cover;
                   background-position: center;
                   height: 60vh;">
               </div><!-- image 2.1 -->
 
-              <div class="copy-image-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs"
+              <div id="image-5" class="copy-image-en-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs"
                   style="background: url('./assets/hk-street.jpg');
                   background-size: cover;
                   background-position: center;
                   height: 60vh;">
               </div><!-- image 2.2 -->
 
-              <div class="copy-image-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs"
-                  style="background: url('./assets/hk-skyline.jpg');
+              <div id="image-6" class="copy-image-en-2 col-lg-6 col-md-6 col-sm-12 col-xs-12 start-xs"
+                  style="background: undefined;
                   background-size: cover;
                   background-position: center;
                   height: 60vh;">
@@ -139,9 +146,9 @@
 
             </div><!--why-block -->
 
-                <video autoplay loop muted class="why-video" poster="video.jpg">
-                  <source src="./assets/mid-section-video-16-9.mp4" type="video/mp4">
-                </video>
+             <video class="why-video" loop muted autoplay playsinline> 
+              <source src="./assets/mid-section-video-16-9.mp4" type="video/mp4">
+            </video>
           
           </div> <!-- position-row  -->
 
@@ -150,10 +157,10 @@
       </div><!--why-row-->
 
 
-    </section>
+    </section><!-- Why -->
 
 
-    <section id="why-section"> <!-- Why -->
+    <section id="postions-section"> 
 
 
         <div class="positions-button-wrapper row center-lg center-md center-sm center-xs middle-lg middle-md middle-sm middle-xs">
@@ -170,10 +177,14 @@
       <div class="row stay-connected-row center-lg center-md center-sm center-xs middle-lg middle-md middle-sm middle-xs">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
           <h3>Stay Connected</h3>
-          <input class="email-input" type="email" placeholder="Email" name="email">
-          <!-- [email* email class:email-input placeholder "Email"] -->
-          <input class="email-submit" type="submit">
-          <!-- [submit class:email-submit "Submit"] -->
+
+          <div class="connect-input-wrapper">
+            <input class="email-input" type="email" placeholder="Email" name="email">
+            <input class="email-submit" type="submit">
+          </div>
+
+        
+
           <div class="social-wrapper">
               <a href="#"><i class="fab fa-facebook-f"></i></a>
               <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -209,6 +220,6 @@
       </div>
     </footer><!-- footer -->
   </main>
-  <script src="./main.js"></script>
+  <script src="./main-en.js"></script>
 </body>
 </html>

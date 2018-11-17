@@ -72,7 +72,7 @@ input:-webkit-autofill {
   }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
 
   body{
     margin: 1em;
@@ -98,14 +98,19 @@ header{
   left: 50%;
 }
 .nav{
-  font-size: 1.3em;
+  font-size: 1.1em;
   text-align: center;
   height: 100%;
-  display: flex;
+  
+}
+
+.nav li {
+  list-style: none;
 }
 
 .nav-link-wrapper{
   line-height: 5em;
+  display: flex;
 }
 
 .nav-link-wrapper a{
@@ -176,7 +181,7 @@ video{
   }
   
   .hero-video{
-   width: fit-content;
+   /* width: fit-content; */
   }
 }
 /* Copy */
@@ -275,35 +280,36 @@ video{
 }
 
 
-
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
-  .positions-block{
-    transform: translate(-50%, -35%);
+  .why-block{
+    transform: translate(-50%, -30%);
+    
  }
+
 }
 
 
 @media only screen and (max-width: 600px){
   .why-block{
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -40%);
+    font-size: .6em;
   }
-
   .why-video{
-    width: fit-content;
-    max-height: 100vh;
+    max-height: 70vh;
   }
 }
 @media only screen and (max-width: 350px){
   .why-block{
-    transform: translate(-50%, -35%);
+    font-size: .5em;
+    transform: translate(-50%, -50%);
   }
 
 }
 
 
-/* Why */
+/* Postions */
 
-#why-section{
+#postions-section{
   background: #F5F5F5;
   height: 20vh;
   margin: 1em 0;
@@ -338,16 +344,19 @@ video{
   font-size: 30px;
   font-weight: 300;
 }
+.connect-input-wrapper{
+  width: 100%;
+}
 
 .email-input{
   padding: 10px 20px;
-  color: white;
+  color: rgb(83, 83, 83);
+  margin: 0;
   background: #292929;
   font-size: 16px;
   width: 30%;
-  min-width: 200px;
-  border: 1px solid white;
-  margin-bottom: 3em;
+  min-width: 100px;
+  border: 1px solid rgb(83, 83, 83);
 }
 
 .email-submit{
@@ -356,7 +365,11 @@ video{
   background: none;
   font-size: 16px;
   color: white;
-  margin-bottom: 3em;
+  margin: 0;
+}
+
+.social-wrapper{
+  margin-top: 1em;
 }
 
 .social-wrapper a{
@@ -406,4 +419,15 @@ footer{
     height: 3em;
 
   }
+}
+#myProgress {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#myBar {
+    width: 1%;
+    height: 1px;
+    background-color: #00ff80;
 }

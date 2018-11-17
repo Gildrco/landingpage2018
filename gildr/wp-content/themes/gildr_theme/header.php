@@ -9,11 +9,14 @@
  * @package Gildr
  */
 
+ $logo     = get_field('logo');
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
@@ -33,26 +36,41 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
 
-
+   <div id="myProgress">
+         <div id="myBar"></div>
+      </div>
 
   <main>
 	
-		<header><!-- header -->
-			<img src="<?php bloginfo('stylesheet_directory')?>/assets/gildr-logo.png" alt="" class="logo-main">
+	<header><!-- header -->
+
 			
-			<div class="nav-wrapper row end-lg end-md center-sm center-xs middle-lg middle-md">
-			
-							<nav class="nav col-lg-4 col-md-4">
-								<div class="nav-link-wrapper">
-									<a class="nav-link-lang" href="#">English &nbsp;&nbsp;/</a><a class="nav-link-lang" href="#">中文</a>
-								</div>
-				
-								<div class="nav-link-wrapper">
-									<a class="nav-link-cta" href="#">Main</a><a class="nav-link-cta" href="#">Join</a>
-								</div>
-						</nav>		
-			</div><!-- nav-wrapper -->
-			
-		</header><!-- Header -->
+
+
+		<div class="nav-wrapper row end-lg  between-xs middle-lg middle-md middle-sm middle-xs">
+					
+					<img src="<?php echo $logo['url']; ?>" alt="" class="logo-main">
+
+					<?php 
+					wp_nav_menu( array(
+
+						'theme_location'        => 'menu-1',
+						'container'             => 'div',
+						'container_class'       => 'nav',
+						'menu_class'            => 'nav-link-wrapper',
+						
+
+					) )
+					?>
+
+			   <!-- <div class="nav">
+              <ul class="nav-link-wrapper">
+              <li><a class="nav-link-lang" style="color: red" href="#">English &nbsp;&nbsp;</a></li> <li><a class="nav-link-lang" href="./index-cn.html">中文</a></li>
+              </ul>
+        </div> -->
+						
+		</div><!-- nav-wrapper -->
+</header><!-- Header -->
+<script src="<?php bloginfo('stylesheet_directory'); ?>/assets/js/header.js"></script>
